@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: quarkus-app-scaler
+spec:
+  scaleTargetRef:
+    name: quarkus-app
+  pollingInterval: 30
+  triggers:
+    - type: kafka
+      metadata:
+        bootstrapServers: my-cluster-kafka-bootstrap.kafka:9092
+        consumerGroup: quarkus-keda # quarkus uses the application name as groupId
+        topic: my-topic
+        # Optional
+        lagThreshold: "50"
+        offsetResetPolicy: latest
