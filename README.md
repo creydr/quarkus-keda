@@ -35,7 +35,7 @@ You can scale the app with KEDA to distribute the message processing on multiple
    ```
    kubectl -n kafka run kafka-producer --rm -ti --image=quay.io/strimzi/kafka:0.47.0-kafka-4.0.0 --rm=true --restart=Never -- bin/kafka-producer-perf-test.sh --topic my-topic --num-records 100000 --record-size 10 --throughput -1 --producer-props bootstrap.servers=my-cluster-kafka-bootstrap:9092
    ```
-3. Check how the camel-app gets upscaled by KEDA:
+3. Check how the quarkus-app gets upscaled by KEDA:
    ```
    kubectl get po -l app.kubernetes.io/name=quarkus-app -w
    ```

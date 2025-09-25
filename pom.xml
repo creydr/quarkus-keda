@@ -15,15 +15,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <camel.version>4.14.0</camel.version>
-        <camel.quarkus.platform.version>3.26.0</camel.quarkus.platform.version>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.26.0</quarkus.platform.version>
         <quarkus.kubernetes-client.generate-rbac>false</quarkus.kubernetes-client.generate-rbac>
         <quarkus.container-image.insecure>true</quarkus.container-image.insecure>
         <quarkus.container-image.push>true</quarkus.container-image.push>
         <quarkus.container-image.registry>localhost:5001</quarkus.container-image.registry>
-        <quarkus.container-image.group>camel-kamelets-keda</quarkus.container-image.group>
+        <quarkus.container-image.group>quarkus-keda</quarkus.container-image.group>
 
         <!-- needed from tooling/archetypes -->
         <maven-version>3.9.9</maven-version>
